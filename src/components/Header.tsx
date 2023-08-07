@@ -38,6 +38,7 @@ const Header = styled.div<{ shadow: boolean }>`
   left: 0;
   background-color: #fff;
   border-bottom: 1px solid #aaaaaa;
+  box-sizing: border-box;
   z-index: 100;
   display: flex;
   justify-content: space-between;
