@@ -1,9 +1,19 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Loading: FC<{ disappear: boolean }> = ({ disappear }) => {
+  const [reallyDisappear, setReallyDisappear] = useState(false);
+
+  useEffect(() => {
+    if (disappear) {
+      setTimeout(() => {
+        setReallyDisappear(true);
+      }, 600);
+    }
+  }, [disappear]);
+
   return (
-    <Container disappear={disappear}>
+    <Container disappear={disappear} reallyDisappear={reallyDisappear}>
       <img src="smallImages/loading.gif" />
     </Container>
   );
@@ -11,7 +21,12 @@ const Loading: FC<{ disappear: boolean }> = ({ disappear }) => {
 
 export default Loading;
 
-const Container = styled.div<{ disappear: boolean }>`
+const Container = styled.div<{ disappear: boolean; reallyDisappear: boolean }>`
+  ${(props) => {
+    if (props.reallyDisappear) {
+      return "display: none;";
+    }
+  }}
   width: 100vw;
   height: 100vh;
   background-color: #fff;
