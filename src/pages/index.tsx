@@ -38,7 +38,7 @@ const MainPage: NextPage = () => {
 const MainLayout = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   align-items: center;
 `;
