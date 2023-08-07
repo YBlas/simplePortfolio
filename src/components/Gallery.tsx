@@ -35,7 +35,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   margin-top: 100px;
   @media (max-width: 768px) {
