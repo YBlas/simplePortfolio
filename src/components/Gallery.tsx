@@ -52,7 +52,7 @@ const Column = styled.div`
 `;
 
 const Image = styled.div`
-  width: 650px;
+  width: 38vw;
   background-size: cover;
   background-position: center;
   & > img {
