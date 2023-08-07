@@ -11,15 +11,6 @@ const Gallery: FC = () => {
       <Column>
         {first.map((image) => (
           <Image
-            key={image}
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = `/smallImages/${image + 1}.jpg`;
-              link.download = "image.jpg";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
           >
             <img src={`/smallImages/${image + 1}.jpg`} />
           </Image>
@@ -28,14 +19,6 @@ const Gallery: FC = () => {
       <Column>
         {second.map((image) => (
           <Image
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = `/smallImages/${image + 1}.jpg`;
-              link.download = "image.jpg";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
             key={image}
           >
             <img src={`/smallImages/${image + 1}.jpg`} />
