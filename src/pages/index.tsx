@@ -14,11 +14,23 @@ const MainPage: NextPage = () => {
     }, 5000);
   }, []);
 
+  const [content, setContent] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setContent(true);
+    }, 1000);
+  }, []);
+
   return (
     <MainLayout>
       <Loading disappear={disappear} />
-      <HeaderOwn />
-      <Gallery />
+      {content && (
+        <>
+          <HeaderOwn />
+          <Gallery />
+        </>
+      )}
     </MainLayout>
   );
 };
