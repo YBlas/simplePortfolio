@@ -51,16 +51,17 @@ const Column = styled.div`
 
 const Image = styled.div`
   width: 650px;
-  min-height: 200px;
   background-size: cover;
   background-position: center;
   & > img {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     width: 100%;
   }
-  cursor: pointer;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
   transition: transform 0.2s ease-in-out;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
