@@ -22,5 +22,5 @@ const Container = styled.div<{ disappear: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s ease-in-out;
+  transition: 0.6s ease-in-out;
 `;
