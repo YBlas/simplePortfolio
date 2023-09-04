@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 
-const images = Array.from(Array(19).keys()).sort(() => Math.random() - 0.5);
+const images = Array.from(Array(18).keys()).sort(() => Math.random() - 0.5);
 const first = images.slice(0, images.length / 2);
 const second = images.slice(images.length / 2, images.length);
 
